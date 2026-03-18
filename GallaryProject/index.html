@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5dc;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    /* Image Container */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    /* Caption */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Hover Effects */
+    .gallery-item:hover img {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .caption {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1015/600/400" alt="">
+      <div class="caption">Beautiful Mountains</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1025/600/400" alt="">
+      <div class="caption">Cute Dog</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1035/600/400" alt="">
+      <div class="caption">Ocean View</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1045/600/400" alt="">
+      <div class="caption">City Lights</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1055/600/400" alt="">
+      <div class="caption">Forest Path</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1065/600/400" alt="">
+      <div class="caption">Desert Scene</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1075/600/400" alt="">
+      <div class="caption">Building</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1080/600/400" alt="">
+      <div class="caption">Fruits</div>
+    </div>
+
+
+  </div>
+
+</body>
+</html>
